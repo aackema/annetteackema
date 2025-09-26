@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annette Ackema | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #6a40f8, #f840b2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-item {
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: #fff;
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        .nav-item:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        /* Custom scrollbar for a sleek look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #444;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 p-4 sm:p-6 lg:p-8">
+        <nav class="container mx-auto flex justify-between items-center rounded-full bg-black/50 backdrop-blur-sm p-3 border border-gray-800">
+            <a href="#hero" class="text-lg sm:text-2xl font-bold rounded-full p-2 hover:bg-gray-800 transition-colors">
+                Annette Ackema
+            </a>
+            <div class="flex items-center space-x-4 sm:space-x-8 text-sm sm:text-base">
+                <a href="#about" class="nav-item">About</a>
+                <a href="#work" class="nav-item">Offerings</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center pt-24 pb-12 sm:pt-32 sm:pb-16 lg:pt-40 lg:pb-20">
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold leading-tight animate-fade-in">
+                Hi, I'm <span class="text-gradient">Annette Ackema</span>.
+            </h1>
+            <p class="mt-4 sm:mt-6 text-xl sm:text-2xl text-gray-400 max-w-2xl animate-fade-in" style="animation-delay: 0.3s;">
+                A Somatic Practitioner specializing in trauma healing and subconscious reprogramming.
+            </p>
+            <a href="#work" class="mt-8 sm:mt-10 inline-block px-6 py-3 sm:px-8 sm:py-4 border border-white rounded-full text-sm sm:text-base font-semibold transition-all duration-300 hover:bg-white hover:text-black animate-fade-in" style="animation-delay: 0.6s;">
+                See My Offerings
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 sm:py-24">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-8">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+                <div class="space-y-4 text-gray-300 text-lg">
+                    <p>As a Somatic Practitioner, I guide individuals through the healing of relational, attachment, and sexual trauma. My work is deeply rooted in the body's wisdom, helping you safely release old patterns and reclaim your energy.</p>
+                    <p>I also have a background in **Human Design**, which I use to facilitate the **deconditioning process**. This allows my clients to reconnect with their authentic selves and live in alignment with their unique energetic blueprint. I also host **retreats** around the world, creating powerful spaces for transformation and deep healing.</p>
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://i.ibb.co/6P2T96r/alchemy-blends-1.jpg" alt="Annette Ackema" class="rounded-3xl shadow-lg w-full max-w-sm h-auto object-cover border border-gray-800">
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Section -->
+        <section id="work" class="py-16 sm:py-24">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12">My Offerings</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Trauma Healing Programs -->
+                <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-800 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.ibb.co/Mnhh67c/alchemy-blends-2.jpg" alt="Trauma Healing Programs" class="w-full h-auto">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold">Trauma Healing Programs</h3>
+                        <p class="text-gray-400 mt-2">Personalized sessions designed to gently and safely address relational, attachment, and sexual trauma through somatic practices.</p>
+                    </div>
+                </div>
+                <!-- Creative Empowerment -->
+                <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-800 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.ibb.co/3S4TgyP/alchemy-blends-3.jpg" alt="Creative Empowerment" class="w-full h-auto">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold">Creative Empowerment</h3>
+                        <p class="text-gray-400 mt-2">I help creatives channel their energy, release creative blocks, and undergo subconscious reprogramming to unlock their full potential.</p>
+                    </div>
+                </div>
+                <!-- Global Retreats -->
+                <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-800 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://i.ibb.co/rQhG852/alchemy-blends-4.jpg" alt="Global Retreats" class="w-full h-auto">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold">Global Retreats</h3>
+                        <p class="text-gray-400 mt-2">Join me at one of my immersive retreats around the world for a deep dive into healing, connection, and self-discovery.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 sm:py-24">
+            <div class="text-center">
+                <h2 class="text-4xl sm:text-5xl font-bold">Get In Touch</h2>
+                <p class="text-xl text-gray-400 mt-4 max-w-2xl mx-auto">
+                    I'm here to support your healing journey. Let's connect and see how we can work together.
+                </p>
+                <div class="mt-8 flex justify-center space-x-4">
+                    <a href="mailto:annette.ackema@example.com" class="inline-block px-6 py-3 sm:px-8 sm:py-4 bg-white text-black font-semibold rounded-full transition-all duration-300 hover:bg-gray-300">
+                        Email Me
+                    </a>
+                    <a href="#" class="inline-block px-6 py-3 sm:px-8 sm:py-4 border border-gray-600 text-white font-semibold rounded-full transition-all duration-300 hover:bg-gray-800">
+                        My Offerings PDF
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 py-8 text-sm">
+        &copy; 2024 Annette Ackema. All rights reserved.
+    </footer>
+
+</body>
+</html>
